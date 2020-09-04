@@ -6,12 +6,13 @@ import PropTypes from 'prop-types';
 import './styles.scss';
 
 // == Composant
-const FormMessage = ({ messageText }) => (
+const FormMessage = ({ messageText, onMessageSubmit, onChangeInput }) => (
   <form
     className="message-form"
     onSubmit={(event) => {
       event.preventDefault();
       console.log('clic');
+      onMessageSubmit();
     }}
   >
     <input
@@ -22,6 +23,7 @@ const FormMessage = ({ messageText }) => (
       onChange={(event) => {
         const text= event.target.value;
         console.log(text);
+        onChangeInput(text);
       }}
     />
     <div className="container-button">
@@ -37,6 +39,8 @@ const FormMessage = ({ messageText }) => (
 
 FormMessage.propTypes = {
   messageText: PropTypes.string.isRequired,
+  onMessageSubmit: PropTypes.func.isRequired,
+  onChangeInput: PropTypes.func.isRequired,
 };
 // == Export
 export default FormMessage;

@@ -39,7 +39,11 @@ const data = [
 const App = () => (
   <div className="app">
     <ListMessages list={data} />
-    <FormMessage messageText="" />
+    <FormMessage
+      messageText=""
+      onMessageSubmit
+      onChangeInput
+    />
   </div>
 );
 
