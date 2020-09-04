@@ -3,6 +3,7 @@
 .message-form {
     display: flex;
     height: 5%;
+    margin-bottom: vars.$gutter;
 }
 
 .form-input{
@@ -10,7 +11,7 @@
     background-color: vars.$color-alt-lighten;
     border-radius: 10px;
     border: none;
-    box-shadow: 5px 5px vars.$primary-color;
+    box-shadow: 3px 3px vars.$primary-color;
     font-size: 1.5em;
     padding-left: vars.$gutter;
     
@@ -30,6 +31,7 @@
 }
 .form-button {
     background-color: vars.$color-alt-lighten;
+    color: #fff;
     width: 50%;
     padding: .4em;
     border: none;

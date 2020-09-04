@@ -4,7 +4,7 @@ import React from 'react';
 // == Import
 import './styles.scss';
 import ListMessages from '../../containers/MessageList';
-import FormMessage from '../FormMessage';
+import FormMessage from '../../containers/MessageForm';
 
 // == Composant
 const App = () => (

@@ -11,7 +11,6 @@ const FormMessage = ({ messageText, onMessageSubmit, onChangeInput }) => (
     className="message-form"
     onSubmit={(event) => {
       event.preventDefault();
-      console.log('clic');
       onMessageSubmit();
     }}
   >
@@ -21,8 +20,8 @@ const FormMessage = ({ messageText, onMessageSubmit, onChangeInput }) => (
       className="form-input"
       value={messageText}
       onChange={(event) => {
-        const text= event.target.value;
-        console.log(text);
+        const text = event.target.value;
+        // console.log(text);
         onChangeInput(text);
       }}
     />

@@ -1,39 +1,58 @@
-import { } from '../actions';
+import { ON_SUBMIT, ON_CHANGE } from '../actions/messageForm';
 
 const initialState = {
   list: [
     {
       id: 1,
-      author: 'Benoit Robin',
+      author: 'John Doe',
       content: 'Salut comment ça va ?',
     },
     {
       id: 2,
-      author: 'Elon Musk',
+      author: 'Alice Cooper',
       content: 'Va bien, on fait couler!',
     },
     {
       id: 3,
-      author: 'Steve Jobs',
-      content: 'Qu\'est-ce tu racontes?',
+      author: 'William Yates',
+      content: 'Qu\'est-ce que vous racontez?',
     },
     {
       id: 4,
-      author: 'Steve Wozniak',
+      author: 'Calimero',
       content: 'H\é ! les gars je suis là!!',
     },
     {
       id: 5,
-      author: 'Benoit Robin',
+      author: 'John Doe',
       content: '....',
     },
   ],
 
-  messageText: 'Salut je commence à écr',
+  messageText: '',
 };
 
 const message = (state = initialState, action = {}) => {
   switch (action.type) {
+    case ON_CHANGE:
+      return {
+        ...state,
+        messageText: action.text,
+      };
+    case ON_SUBMIT:
+      return {
+        ...state,
+        list: [
+          ...state.list,
+          {
+            id: 6,
+            author: 'Malcom',
+            content: state.messageText,
+          },
+        ],
+        messageText: '',
+
+      };
     default:
       return state;
   }
