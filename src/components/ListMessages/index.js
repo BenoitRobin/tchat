@@ -5,7 +5,16 @@ import React from 'react';
 import './styles.scss';
 
 // == Composant
-const ListMessages = () => <div>liste des Messages</div>;
+const ListMessages = () => (
+  <Message />
+);
+
+const Message = () => (
+  <div className="message">
+    <span className="message-author">Benoit Robin</span>
+    <p className="message-content">Comment ça va ?</p>
+  </div>
+);
 
 // == Export
 export default ListMessages;
