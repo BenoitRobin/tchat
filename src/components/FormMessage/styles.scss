@@ -1,0 +1,50 @@
+@use 'src/styles/vars';
+
+.message-form {
+    display: flex;
+    height: 5%;
+}
+
+.form-input{
+    width: 100%;
+    background-color: vars.$color-alt-lighten;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 5px 5px vars.$primary-color;
+    font-size: 1.5em;
+    padding-left: vars.$gutter;
+    
+    &::placeholder {
+        color: #ABABAB;
+        font-size: .8em;
+    }
+}
+
+
+.container-button {
+    width: 15%;
+    // background-color: #fff;
+    text-align: center;
+    padding-top: .4em;
+
+}
+.form-button {
+    background-color: vars.$color-alt-lighten;
+    width: 50%;
+    padding: .4em;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    line-height: 1em;
+    text-transform: uppercase;
+    margin-left: vars.$gutter;
+    box-shadow: 5px 5px vars.$primary-color;
+    font-family: 'Source Code Pro', sans-serif;
+    transition: all 0.3s ease-out;
+    
+    &:hover {
+        transform: translate(5px, 5px);
+        box-shadow: none;
+    }
+}
+

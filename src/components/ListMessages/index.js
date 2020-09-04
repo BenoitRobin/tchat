@@ -11,7 +11,7 @@ const ListMessages = () => (
 
 const Message = () => (
   <div className="message">
-    <span className="message-author">Benoit Robin</span>
+    <div className="message-author">Benoit Robin</div>
     <p className="message-content">Comment ça va ?</p>
   </div>
 );

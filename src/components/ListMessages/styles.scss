@@ -1,0 +1,18 @@
+@use 'src/styles/vars';
+
+.message {
+    padding: vars.$gutter;
+    &-author {
+        font-weight: vars.$font-weigth-bold;
+        margin-bottom: vars.$gutter;
+    }
+    &-content {
+        background-color: vars.$primary-color;
+        margin-left: vars.$gutter*2;
+        padding: 1.2em .7em;
+        border-radius: 10px;
+        width: fit-content;
+
+        color: black;
+    }
+}

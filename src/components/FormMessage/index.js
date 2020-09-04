@@ -16,6 +16,7 @@ const FormMessage = ({ messageText }) => (
   >
     <input
       type="text"
+      placeholder="Saisissez un message !"
       className="form-input"
       value={messageText}
       onChange={(event) => {
@@ -23,12 +24,14 @@ const FormMessage = ({ messageText }) => (
         console.log(text);
       }}
     />
-    <button
-      className="form-button"
-      type="submit"
-    >
-      &gt;
-    </button>
+    <div className="container-button">
+      <button
+        className="form-button"
+        type="submit"
+      >
+        send
+      </button>
+    </div>
   </form>
 );
 
