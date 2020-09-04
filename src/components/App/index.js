@@ -3,7 +3,7 @@ import React from 'react';
 
 // == Import
 import './styles.scss';
-import ListMessages from '../ListMessages';
+import ListMessages from '../../containers/MessageList';
 import FormMessage from '../FormMessage';
 
 // == Composant
