@@ -1,0 +1,73 @@
+@use 'src/styles/vars';
+
+.settingBlock {
+    display: flex;
+    position: fixed;
+    top: 20px;
+    
+    right: -378px;
+    width: 33%;
+
+    margin: vars.$gutter;
+    border-radius: 5px;
+
+    background-color: rgba(255, 255, 255, .4);
+
+    &.opened {
+        right: -20px;
+    }
+}
+
+.setting-zone {
+    padding: vars.$gutter;
+
+    & input {
+        margin-bottom: 1em;
+        padding: .5em;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+    }
+}
+
+.toggle-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    transform: rotate(0deg);
+    background-color: vars.$primary-color;
+
+    &.opened {
+        transform: rotate(45deg);
+    }
+}
+
+.submit-button {
+    width: 30%;
+    height: 25%;
+    margin-bottom: vars.$gutter;
+    background-color: vars.$color-alt-lighten;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+
+     
+    font-size: 1em;
+    line-height: 1em;
+    text-transform: uppercase;
+    box-shadow: 3px 3px vars.$primary-color;
+    font-family: 'Source Code Pro', sans-serif;
+    transition: all 0.3s ease-out;
+    &:hover {
+        transform: translate(3px, 3px);
+        box-shadow: none;
+    }
+}
